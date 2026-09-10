@@ -497,7 +497,7 @@ textarea {
   gap: 1rem;
 }
 
-.restref-floating {
+.site-header [id^="ot-restref-v2-widget-container"] {
   position: fixed;
   right: 1.25rem;
   bottom: 1.25rem;
@@ -505,16 +505,9 @@ textarea {
   width: min(390px, calc(100vw - 2rem));
   max-height: calc(100vh - 2.5rem);
   background: transparent;
-  box-shadow: none;
 }
 
-.restref-floating [id^="ot-restref-v2-widget-container"] {
-  display: block;
-  width: 100%;
-  background: transparent;
-}
-
-.restref-floating .ot-restref-v2-widget-iframe {
+.site-header .ot-restref-v2-widget-iframe {
   display: block;
   width: 100% !important;
   max-width: 100% !important;

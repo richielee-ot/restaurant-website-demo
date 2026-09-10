@@ -22,6 +22,8 @@
           <a href="settings.html" aria-current="page">Settings</a>
         </nav>
       </div>
+      <!-- Floating widget: paste in the site header so it loads on every page. -->
+      <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=floating&ot_source=Restaurant%20website'></script>
     </header>
 
     <section class="page-hero">
@@ -29,18 +31,19 @@
         <p class="eyebrow">Implementation</p>
         <h1>Settings</h1>
         <p>
-          These are the restref snippets installed on this demo. Home uses the
-          floating widget; Reservations uses the embedded widget. Copy them, or
-          paste a replacement for reference in this browser.
+          These snippets match a typical restaurant-site install. The floating
+          widget is pasted in the site header so it appears on every page. The
+          embedded widget is pasted in the body of the reservations page.
         </p>
         <ol class="demo-steps">
-          <li>Confirm or paste each snippet below, then save.</li>
+          <li>Copy the header snippet for a site-wide floating widget.</li>
           <li>
-            Open <a href="index.html">Home</a> to demo the floating widget.
+            Open <a href="index.html">Home</a> — the floating widget comes from
+            the header.
           </li>
           <li>
-            Open <a href="reservations.html">Reservations</a> to demo the
-            embedded widget.
+            Open <a href="reservations.html">Reservations</a> for the embedded
+            widget in the page body (the floating header widget is there too).
           </li>
         </ol>
       </div>
@@ -51,8 +54,8 @@
         <article class="snippet-card">
           <h2>Home Page Widget</h2>
           <p>
-            Floating restref widget, pinned to the bottom-right of
-            <a href="index.html">Home</a>.
+            Floating widget. Paste this in the site header (WordPress/Wix/Squarespace
+            header code, or the theme header) so it loads on every page.
           </p>
           <form id="home-form">
             <label for="home-snippet">Snippet</label>
@@ -73,8 +76,8 @@
         <article class="snippet-card">
           <h2>Reservation Page Widget</h2>
           <p>
-            Embedded restref widget. After you save, it loads in the page body
-            on <a href="reservations.html">Reservations</a>.
+            Embedded widget. Paste this in the body of the reservations page,
+            where the booking form should sit.
           </p>
           <form id="reservations-form">
             <label for="reservations-snippet">Snippet</label>
