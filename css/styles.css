@@ -504,14 +504,14 @@ textarea {
   z-index: 2147483000;
   width: min(390px, calc(100vw - 2rem));
   max-height: calc(100vh - 2.5rem);
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.35);
+  background: transparent;
+  box-shadow: none;
 }
 
 .restref-floating [id^="ot-restref-v2-widget-container"] {
   display: block;
   width: 100%;
+  background: transparent;
 }
 
 .restref-floating .ot-restref-v2-widget-iframe {
@@ -520,5 +520,5 @@ textarea {
   max-width: 100% !important;
   height: min(640px, calc(100vh - 2.5rem));
   border: 0;
-  background: #fff;
+  background: transparent;
 }
