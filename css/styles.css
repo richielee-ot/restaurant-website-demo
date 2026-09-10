@@ -69,6 +69,7 @@ a {
 
 .nav-links {
   display: flex;
+  flex-wrap: wrap;
   gap: 1.25rem;
 }
 
@@ -164,8 +165,7 @@ h3 {
 
 .meta-card,
 .page-intro,
-.widget-panel,
-.tester-panel {
+.widget-panel {
   background: var(--cream);
   border: 1px solid var(--line);
   padding: 1.5rem;
@@ -209,24 +209,31 @@ h3 {
   font-size: 0.95rem;
 }
 
-.tester-panel {
-  background: var(--panel);
-  margin-top: 2rem;
+.demo-steps {
+  margin: 1rem 0 0;
+  padding-left: 1.2rem;
 }
 
-.tester-panel h2 {
+.snippet-card {
+  background: var(--panel);
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+}
+
+.snippet-card + .snippet-card {
+  margin-top: 1.5rem;
+}
+
+.snippet-card h2 {
   margin-top: 0;
 }
 
-.tester-grid {
-  display: grid;
-  gap: 1rem;
+.snippet-card textarea {
+  min-height: 7.5rem;
 }
 
-@media (min-width: 720px) {
-  .tester-grid {
-    grid-template-columns: 1fr 1fr;
-  }
+a.button {
+  text-align: center;
 }
 
 label {

@@ -1,48 +1,39 @@
 # The Copper Spoon — restref demo
 
-A small static restaurant website for testing OpenTable restref widgets. OpenTable teammates can open the live site, see a default snippet, paste their own generated code, or share a URL with a restaurant ID.
+A small static restaurant website for testing OpenTable restref widgets.
 
 ## Live site
 
-- Home: https://richielee-ot.github.io/restaurant-website-demo/
-- Reservations / widget tester: https://richielee-ot.github.io/restaurant-website-demo/reservations.html
+- Home (floating widget): https://richielee-ot.github.io/restaurant-website-demo/
+- Reservations (embedded widget): https://richielee-ot.github.io/restaurant-website-demo/reservations.html
+- Settings (snippets): https://richielee-ot.github.io/restaurant-website-demo/settings.html
 
-## Default snippet
+## How to demo
 
-The reservations page loads this restref-v2 floating widget unless URL params or a pasted snippet override it:
+1. Open **Settings**. Confirm the two snippets, or paste replacements and save. Saves stay in this browser only.
+2. Open **Home**. The Home Page Widget is the floating restref implementation (`widgetMode=floating`). Look for the OpenTable overlay button.
+3. Open **Reservations**. The Reservation Page Widget is the embedded restref implementation (`widgetMode=embedded`) in the page body.
+
+## Default snippets
+
+Home Page Widget:
 
 ```html
-<script type="text/javascript" src="//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=floating&ot_source=Restaurant%20website"></script>
+<script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=floating&ot_source=Restaurant%20website'></script>
 ```
 
-The widget is injected into `#restref-mount`. If `widgetMode=floating`, look for the OpenTable overlay button rather than an inline form.
+Reservation Page Widget:
 
-## Paste your own snippet
-
-1. Open the [reservations page](https://richielee-ot.github.io/restaurant-website-demo/reservations.html).
-2. Paste a generated `<script>` snippet into **Paste restref snippet**.
-3. Click **Load snippet**.
-
-The pasted code runs in the browser only. It is not saved on a server.
-
-## Share a configured link
-
-Use restaurant params instead of pasting markup:
-
-`https://richielee-ot.github.io/restaurant-website-demo/reservations.html?rid=515106&widgetMode=floating`
-
-Optional `domain` (defaults to `www.opentable.co.uk`):
-
-`https://richielee-ot.github.io/restaurant-website-demo/reservations.html?rid=515106&widgetMode=floating&domain=www.opentable.com`
-
-On the reservations page, **Load from params** applies the fields, and **Copy shareable link** copies the URL.
+```html
+<script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=embedded&ot_source=Restaurant%20website'></script>
+```
 
 ## Run locally
 
-The widget script uses a protocol-relative URL, so serve over HTTP rather than opening the HTML file directly:
+The widget scripts use protocol-relative URLs, so serve over HTTP rather than opening the HTML files directly:
 
 ```bash
 python3 -m http.server 8000
 ```
 
-Then open http://localhost:8000 and http://localhost:8000/reservations.html.
+Then open http://localhost:8000, http://localhost:8000/reservations.html, and http://localhost:8000/settings.html.

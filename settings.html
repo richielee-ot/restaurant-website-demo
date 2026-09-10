@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Settings — The Copper Spoon</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="nav-wrap">
+        <a class="brand" href="index.html">The Copper Spoon</a>
+        <nav class="nav-links" aria-label="Primary">
+          <a href="index.html">Home</a>
+          <a href="reservations.html">Reservations</a>
+          <a href="settings.html" aria-current="page">Settings</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="page-hero">
+      <div class="section-inner page-intro">
+        <p class="eyebrow">Implementation</p>
+        <h1>Settings</h1>
+        <p>
+          Store the restref snippets used on this demo. Saving keeps them in
+          this browser only, then Home and Reservations load the matching
+          implementation.
+        </p>
+        <ol class="demo-steps">
+          <li>Confirm or paste each snippet below, then save.</li>
+          <li>
+            Open <a href="index.html">Home</a> to demo the floating widget.
+          </li>
+          <li>
+            Open <a href="reservations.html">Reservations</a> to demo the
+            embedded widget.
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="section-inner">
+        <article class="snippet-card">
+          <h2>Home Page Widget</h2>
+          <p>
+            Floating restref widget. After you save, it loads on
+            <a href="index.html">Home</a> as an overlay button.
+          </p>
+          <form id="home-form">
+            <label for="home-snippet">Snippet</label>
+            <textarea id="home-snippet" name="home-snippet" spellcheck="false"></textarea>
+            <div class="actions">
+              <button class="button" type="submit">Save</button>
+              <button class="button button-secondary" id="home-copy" type="button">
+                Copy snippet
+              </button>
+              <button class="button button-secondary" id="home-reset" type="button">
+                Reset default
+              </button>
+              <a class="button button-secondary" href="index.html">View Home</a>
+            </div>
+          </form>
+        </article>
+
+        <article class="snippet-card">
+          <h2>Reservation Page Widget</h2>
+          <p>
+            Embedded restref widget. After you save, it loads in the page body
+            on <a href="reservations.html">Reservations</a>.
+          </p>
+          <form id="reservations-form">
+            <label for="reservations-snippet">Snippet</label>
+            <textarea
+              id="reservations-snippet"
+              name="reservations-snippet"
+              spellcheck="false"
+            ></textarea>
+            <div class="actions">
+              <button class="button" type="submit">Save</button>
+              <button class="button button-secondary" id="reservations-copy" type="button">
+                Copy snippet
+              </button>
+              <button class="button button-secondary" id="reservations-reset" type="button">
+                Reset default
+              </button>
+              <a class="button button-secondary" href="reservations.html">
+                View Reservations
+              </a>
+            </div>
+          </form>
+        </article>
+
+        <p class="status" id="status" aria-live="polite"></p>
+      </div>
+    </section>
+
+    <footer class="site-footer">
+      <div class="footer-wrap">
+        <span>The Copper Spoon</span>
+        <a href="index.html">Back to home</a>
+      </div>
+    </footer>
+
+    <script src="js/restref.js"></script>
+    <script src="js/settings.js"></script>
+  </body>
+</html>

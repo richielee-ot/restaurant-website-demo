@@ -13,6 +13,7 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html">Home</a>
           <a href="reservations.html" aria-current="page">Reservations</a>
+          <a href="settings.html">Settings</a>
         </nav>
       </div>
     </header>
@@ -22,9 +23,8 @@
         <p class="eyebrow">OpenTable</p>
         <h1>Reserve a table</h1>
         <p>
-          This page hosts the restref widget. The default snippet loads below.
-          Use the tester to paste another snippet or share a link with a
-          restaurant ID.
+          Book from this page using the embedded Reservation Page Widget. Swap
+          the snippet on <a href="settings.html">Settings</a>.
         </p>
       </div>
     </section>
@@ -32,73 +32,10 @@
     <section class="section">
       <div class="section-inner">
         <div class="widget-panel">
-          <h2>Widget mount</h2>
-          <p>
-            Drop inline or standard snippets into
-            <code>#restref-mount</code>. Floating widgets appear as an overlay
-            on the page.
-          </p>
+          <h2>Find a table</h2>
+          <p>Choose a date, time, and party size below.</p>
           <div id="restref-mount" data-restref-mount></div>
-          <p class="floating-note">
-            If <code>widgetMode=floating</code>, look for the OpenTable button
-            on this page rather than an inline form.
-          </p>
         </div>
-
-        <aside class="tester-panel">
-          <h2>Implementation tester</h2>
-          <p>
-            For OpenTable teammates. Nothing is saved on a server. Paste a
-            generated snippet, or build a shareable URL from restaurant params.
-          </p>
-
-          <div class="tester-grid">
-            <form id="params-form">
-              <label for="rid">Restaurant ID (rid)</label>
-              <input id="rid" name="rid" value="515106" autocomplete="off" />
-
-              <label for="widgetMode">widgetMode</label>
-              <input
-                id="widgetMode"
-                name="widgetMode"
-                value="floating"
-                autocomplete="off"
-              />
-
-              <label for="domain">Domain</label>
-              <input
-                id="domain"
-                name="domain"
-                value="www.opentable.co.uk"
-                autocomplete="off"
-              />
-
-              <div class="actions">
-                <button class="button" type="submit">Load from params</button>
-                <button class="button button-secondary" id="copy-link" type="button">
-                  Copy shareable link
-                </button>
-              </div>
-            </form>
-
-            <form id="paste-form">
-              <label for="snippet">Paste restref snippet</label>
-              <textarea
-                id="snippet"
-                name="snippet"
-                spellcheck="false"
-                placeholder="<script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=floating&ot_source=Restaurant%20website'></script>"
-              ></textarea>
-              <div class="actions">
-                <button class="button" type="submit">Load snippet</button>
-              </div>
-            </form>
-          </div>
-
-          <p class="status" id="status" aria-live="polite"></p>
-          <h3>Currently loaded</h3>
-          <pre class="snippet-preview" id="snippet-preview"></pre>
-        </aside>
       </div>
     </section>
 
@@ -109,6 +46,9 @@
       </div>
     </footer>
 
-    <script src="js/snippet-tester.js"></script>
+    <script src="js/restref.js"></script>
+    <script>
+      Restref.loadPage("reservations", document.getElementById("restref-mount"));
+    </script>
   </body>
 </html>

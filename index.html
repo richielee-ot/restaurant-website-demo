@@ -13,6 +13,7 @@
         <nav class="nav-links" aria-label="Primary">
           <a href="index.html" aria-current="page">Home</a>
           <a href="reservations.html">Reservations</a>
+          <a href="settings.html">Settings</a>
         </nav>
       </div>
     </header>
@@ -23,7 +24,8 @@
         <h1>The Copper Spoon</h1>
         <p class="lede">
           Seasonal British cooking, an open kitchen, and a table waiting when
-          you are ready. Demo restaurant site for OpenTable restref widgets.
+          you are ready. The floating OpenTable widget on this page is the
+          Home Page Widget from Settings.
         </p>
         <a class="button" href="reservations.html">Reserve a table</a>
       </div>
@@ -34,10 +36,10 @@
         <div>
           <h2>A quiet corner of the high street</h2>
           <p>
-            The Copper Spoon is a fictional restaurant used to test OpenTable
-            restref snippets on a real-looking website. The booking flow lives
-            on the reservations page, where you can load the default widget or
-            paste your own generated code.
+            The Copper Spoon is a fictional restaurant for testing OpenTable
+            restref snippets. Home uses the floating widget. Reservations uses
+            the embedded widget. Edit both on
+            <a href="settings.html">Settings</a>.
           </p>
           <p>
             Come for roast chicken and greens, stay for a pudding and a late
@@ -65,5 +67,11 @@
         <a href="reservations.html">Book with OpenTable</a>
       </div>
     </footer>
+
+    <div id="home-restref-mount"></div>
+    <script src="js/restref.js"></script>
+    <script>
+      Restref.loadPage("home", document.getElementById("home-restref-mount"));
+    </script>
   </body>
 </html>
