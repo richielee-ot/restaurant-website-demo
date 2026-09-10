@@ -12,7 +12,7 @@ A small static restaurant website for testing OpenTable restref widgets.
 
 1. Open **Settings** to copy or inspect the two snippets.
 2. Edit a snippet on **Settings** and Save. Home, Reservations, and Settings all read that snippet from this browser.
-3. The floating snippet is written into the **site header**. The embedded snippet is written into the reservations page body.
+3. Under **Home Page Widget**, uncheck a page to hide the floating widget there. The floating snippet still lives in the site header; it is simply not written on disabled pages.
 
 ## Default snippets
 

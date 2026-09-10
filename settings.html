@@ -11,7 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
-    <script src="js/restref.js?v=3"></script>
+    <script src="js/restref.js?v=4"></script>
   </head>
   <body>
     <header class="site-header site-header--solid">
@@ -35,8 +35,9 @@
         <h1>Settings</h1>
         <p>
           Edit the snippets below and save. This browser will use them in the
-          same places a restaurant would: floating widget in the site header
-          (every page), embedded widget in the reservations page body.
+          same places a restaurant would: floating widget in the site header,
+          embedded widget in the reservations page body. You can turn the
+          floating widget off on individual pages.
         </p>
         <ol class="demo-steps">
           <li>Paste or edit a snippet, then Save.</li>
@@ -44,8 +45,9 @@
             Open <a href="index.html">Home</a> to see the floating header widget.
           </li>
           <li>
-            Open <a href="reservations.html">Reservations</a> to see the
-            embedded widget (the floating header widget loads there too).
+            Open <a href="reservations.html">Reservations</a> for the embedded
+            widget. Uncheck a page above if you do not want the floating widget
+            there.
           </li>
         </ol>
       </div>
@@ -56,10 +58,25 @@
         <article class="snippet-card">
           <h2>Home Page Widget</h2>
           <p>
-            Floating widget. Paste this in the site header (WordPress/Wix/Squarespace
-            header code, or the theme header) so it loads on every page.
+            Floating widget. Paste this in the site header. Use the checkboxes
+            to turn it off on specific pages.
           </p>
           <form id="home-form">
+            <fieldset class="page-toggles">
+              <legend>Show floating widget on</legend>
+              <label>
+                <input type="checkbox" id="float-home" name="float-home" />
+                Home
+              </label>
+              <label>
+                <input type="checkbox" id="float-reservations" name="float-reservations" />
+                Reservations
+              </label>
+              <label>
+                <input type="checkbox" id="float-settings" name="float-settings" />
+                Settings
+              </label>
+            </fieldset>
             <label for="home-snippet">Snippet</label>
             <textarea id="home-snippet" name="home-snippet" spellcheck="false"></textarea>
             <div class="actions">
@@ -114,6 +131,6 @@
       </div>
     </footer>
 
-    <script src="js/settings.js?v=3"></script>
+    <script src="js/settings.js?v=4"></script>
   </body>
 </html>

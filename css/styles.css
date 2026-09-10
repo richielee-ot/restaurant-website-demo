@@ -444,6 +444,36 @@ h3 {
   color: #e2b089;
 }
 
+.page-toggles {
+  margin: 0 0 1.2rem;
+  padding: 0;
+  border: 0;
+}
+
+.page-toggles legend {
+  margin-bottom: 0.55rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.page-toggles label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0 1.1rem 0.35rem 0;
+  text-transform: none;
+  letter-spacing: 0;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.page-toggles input {
+  width: auto;
+  margin: 0;
+  accent-color: var(--copper);
+}
+
 a.button {
   text-align: center;
 }

@@ -2,14 +2,29 @@
   var homeField = document.getElementById("home-snippet");
   var reservationsField = document.getElementById("reservations-snippet");
   var statusEl = document.getElementById("status");
+  var floatHome = document.getElementById("float-home");
+  var floatReservations = document.getElementById("float-reservations");
+  var floatSettings = document.getElementById("float-settings");
 
   function setStatus(message) {
     statusEl.textContent = message;
   }
 
+  function selectedPages() {
+    return {
+      home: floatHome.checked,
+      reservations: floatReservations.checked,
+      settings: floatSettings.checked,
+    };
+  }
+
   function fillFields() {
     homeField.value = Restref.get("home");
     reservationsField.value = Restref.get("reservations");
+    var pages = Restref.getPages();
+    floatHome.checked = pages.home;
+    floatReservations.checked = pages.reservations;
+    floatSettings.checked = pages.settings;
   }
 
   document.getElementById("home-form").addEventListener("submit", function (event) {
@@ -20,6 +35,7 @@
       return;
     }
     Restref.set("home", html);
+    Restref.setPages(selectedPages());
     window.location.reload();
   });
 
@@ -36,6 +52,7 @@
 
   document.getElementById("home-reset").addEventListener("click", function () {
     homeField.value = Restref.reset("home");
+    Restref.resetPages();
     window.location.reload();
   });
 
