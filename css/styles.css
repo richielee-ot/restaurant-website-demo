@@ -383,19 +383,24 @@ h3 {
   position: relative;
   z-index: 1;
   width: min(480px, 100%);
-  background: #fff;
-  color: var(--ink);
-  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.4);
+  background: transparent;
 }
 
 #restref-mount {
   min-height: 18rem;
+  background: transparent;
+}
+
+#restref-mount [id^="ot-restref-v2-widget-container"] {
+  background: transparent;
 }
 
 #restref-mount .ot-restref-v2-widget-iframe {
   display: block;
   width: 100% !important;
   max-width: 100% !important;
+  border: 0;
+  background: transparent;
 }
 
 .page-intro,
