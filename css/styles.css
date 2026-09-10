@@ -1,0 +1,293 @@
+:root {
+  --ink: #2b2118;
+  --muted: #6b5b4d;
+  --paper: #f7f1e8;
+  --cream: #fffaf3;
+  --copper: #b05c2c;
+  --copper-dark: #8c431c;
+  --line: #e4d8c8;
+  --panel: #efe6d8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: Georgia, "Times New Roman", serif;
+  line-height: 1.6;
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: var(--copper-dark);
+}
+
+.site-header,
+.site-footer {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.site-header a,
+.site-footer a {
+  color: var(--cream);
+  text-decoration: none;
+}
+
+.nav-wrap,
+.footer-wrap,
+.hero-inner,
+.section-inner {
+  width: min(960px, calc(100% - 2rem));
+  margin: 0 auto;
+}
+
+.nav-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  min-height: 4.25rem;
+}
+
+.brand {
+  font-size: 1.15rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.25rem;
+}
+
+.nav-links a[aria-current="page"] {
+  border-bottom: 1px solid var(--cream);
+}
+
+.hero {
+  background:
+    linear-gradient(180deg, rgba(43, 33, 24, 0.45), rgba(43, 33, 24, 0.7)),
+    radial-gradient(circle at 20% 20%, #d7a077, #8c431c 55%, #2b2118);
+  color: var(--cream);
+  padding: 5.5rem 0 4.5rem;
+}
+
+.hero-inner {
+  text-align: center;
+}
+
+.eyebrow {
+  margin: 0 0 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-size: 0.78rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.2;
+}
+
+.hero h1 {
+  margin: 0 0 0.75rem;
+  font-size: clamp(2.4rem, 6vw, 4.2rem);
+}
+
+.lede {
+  margin: 0 auto 1.75rem;
+  max-width: 36rem;
+  font-size: 1.15rem;
+}
+
+.button {
+  display: inline-block;
+  border: 0;
+  border-radius: 999px;
+  padding: 0.75rem 1.35rem;
+  background: var(--copper);
+  color: #fff;
+  text-decoration: none;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.95rem;
+  cursor: pointer;
+}
+
+.button:hover {
+  background: var(--copper-dark);
+}
+
+.button-secondary {
+  background: transparent;
+  color: var(--ink);
+  border: 1px solid var(--ink);
+}
+
+.button-secondary:hover {
+  background: var(--ink);
+  color: var(--cream);
+}
+
+.section {
+  padding: 4rem 0;
+}
+
+.section + .section {
+  border-top: 1px solid var(--line);
+}
+
+.split {
+  display: grid;
+  gap: 2rem;
+}
+
+@media (min-width: 720px) {
+  .split {
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: start;
+  }
+}
+
+.meta-card,
+.page-intro,
+.widget-panel,
+.tester-panel {
+  background: var(--cream);
+  border: 1px solid var(--line);
+  padding: 1.5rem;
+}
+
+.meta-card p,
+.hours-list {
+  margin: 0.35rem 0;
+}
+
+.hours-list {
+  padding: 0;
+  list-style: none;
+}
+
+.hours-list span {
+  display: inline-block;
+  min-width: 7.5rem;
+  color: var(--muted);
+}
+
+.page-hero {
+  padding: 3rem 0 1rem;
+}
+
+.widget-panel {
+  min-height: 12rem;
+}
+
+.widget-panel h2 {
+  margin-top: 0;
+}
+
+#restref-mount {
+  min-height: 4rem;
+}
+
+.floating-note {
+  margin-top: 1rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tester-panel {
+  background: var(--panel);
+  margin-top: 2rem;
+}
+
+.tester-panel h2 {
+  margin-top: 0;
+}
+
+.tester-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 720px) {
+  .tester-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.85rem;
+}
+
+input,
+select,
+textarea {
+  width: 100%;
+  border: 1px solid var(--line);
+  background: var(--cream);
+  color: var(--ink);
+  padding: 0.7rem 0.8rem;
+  font: inherit;
+}
+
+textarea {
+  min-height: 8.5rem;
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.82rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 0.85rem;
+}
+
+.status {
+  min-height: 1.4rem;
+  margin: 0.75rem 0 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 0.9rem;
+}
+
+code,
+.snippet-preview {
+  font-family: Menlo, Consolas, monospace;
+  font-size: 0.8rem;
+}
+
+.snippet-preview {
+  overflow: auto;
+  background: var(--ink);
+  color: var(--cream);
+  padding: 1rem;
+  white-space: pre-wrap;
+}
+
+.site-footer {
+  padding: 1.5rem 0;
+  font-size: 0.95rem;
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
