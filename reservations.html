@@ -4,9 +4,15 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Reservations — The Copper Spoon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
-  <body>
+  <body class="page-reservations">
     <header class="site-header">
       <div class="nav-wrap">
         <a class="brand" href="index.html">The Copper Spoon</a>
@@ -18,34 +24,15 @@
       </div>
     </header>
 
-    <section class="page-hero">
-      <div class="section-inner page-intro">
-        <p class="eyebrow">Book a table</p>
-        <h1>Reservations</h1>
-        <p>
-          Lunch, dinner, and Sunday roast. Tell us when you would like to come
-          and we will find a table.
-        </p>
+    <main class="reserve-stage">
+      <img
+        class="reserve-bg"
+        src="images/reserve-bg.jpg"
+        alt=""
+      />
+      <div class="widget-only" id="restref-mount">
+        <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=embedded&ot_source=Restaurant%20website'></script>
       </div>
-    </section>
-
-    <section class="section">
-      <div class="section-inner">
-        <div class="widget-panel">
-          <h2>Find a table</h2>
-          <p>Choose a date, time, and party size.</p>
-          <div id="restref-mount">
-            <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=embedded&ot_source=Restaurant%20website'></script>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <footer class="site-footer">
-      <div class="footer-wrap">
-        <span>The Copper Spoon</span>
-        <a href="index.html">Back to home</a>
-      </div>
-    </footer>
+    </main>
   </body>
 </html>

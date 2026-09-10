@@ -3,7 +3,13 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>The Copper Spoon</title>
+    <title>The Copper Spoon — Islington</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500&family=Outfit:wght@400;500;600&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="css/styles.css" />
   </head>
   <body>
@@ -19,50 +25,116 @@
     </header>
 
     <section class="hero">
+      <img
+        class="hero-photo"
+        src="images/hero-dining.jpg"
+        alt="The dining room at The Copper Spoon, with copper lights and an open kitchen"
+      />
       <div class="hero-inner">
-        <p class="eyebrow">Neighborhood kitchen</p>
+        <p class="eyebrow">Islington · Open kitchen</p>
         <h1>The Copper Spoon</h1>
         <p class="lede">
-          Seasonal British cooking, an open kitchen, and a table waiting when
-          you are ready.
+          A thirty-cover room on Elm Row. Wood fire, a short menu, and wine we
+          actually want to drink.
         </p>
         <a class="button" href="reservations.html">Reserve a table</a>
       </div>
     </section>
 
-    <section class="section">
-      <div class="section-inner split">
-        <div>
-          <h2>A quiet corner of the high street</h2>
+    <section class="section section-light">
+      <div class="section-inner intro-grid">
+        <div class="intro-copy">
+          <p class="eyebrow">The room</p>
+          <h2>Built around the pass</h2>
           <p>
-            Come for roast chicken and greens, stay for a pudding and a late
-            espresso. We keep the room small on purpose, so booking ahead is
-            the surest way to a table.
+            We cook what comes in that morning: Devon crab when the boats are
+            out, Hereford beef on Fridays, greens from a farm in Kent. The menu
+            is short on purpose.
           </p>
           <p>
-            The kitchen changes with the market. Ask about the daily fish and
-            the Sunday roast.
+            Book for dinner. Walk-ins sit at the counter if a stool is free.
+            Sunday is roast only, one sitting at 1pm.
           </p>
         </div>
-        <aside class="meta-card">
-          <h3>Visit</h3>
-          <p>14 Elm Row, London N1 8DQ</p>
-          <p>020 7946 0138</p>
-          <h3>Hours</h3>
+        <img
+          class="intro-photo"
+          src="images/table.jpg"
+          alt="A scallop dish being set down at the table"
+        />
+      </div>
+    </section>
+
+    <section class="section section-dark">
+      <div class="section-inner">
+        <div class="menu-head">
+          <div>
+            <p class="eyebrow">Tonight</p>
+            <h2>From the kitchen</h2>
+          </div>
+          <p>A sample of the board. It changes. Ask when you sit down.</p>
+        </div>
+        <div class="menu-grid">
+          <article class="dish">
+            <img src="images/dish-roast.jpg" alt="Sliced ribeye with chips" />
+            <div class="dish-body">
+              <h3>Hereford ribeye</h3>
+              <p>Coal-grilled, beef-fat chips, watercress.</p>
+              <span class="price">28</span>
+            </div>
+          </article>
+          <article class="dish">
+            <img src="images/dish-fish.jpg" alt="Pan-fried trout with cucumber" />
+            <div class="dish-body">
+              <h3>Day-boat trout</h3>
+              <p>Brown butter, cucumber, dill, a glass of something white.</p>
+              <span class="price">24</span>
+            </div>
+          </article>
+          <article class="dish">
+            <img src="images/dish-pudding.jpg" alt="Warm chocolate pudding with ice cream and caramel" />
+            <div class="dish-body">
+              <h3>Warm chocolate tart</h3>
+              <p>Salted caramel, vanilla ice cream.</p>
+              <span class="price">11</span>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery" aria-label="The restaurant">
+      <img src="images/wine.jpg" alt="A whisky cocktail on a wooden tray" />
+      <img src="images/kitchen.jpg" alt="The open kitchen, pan on the flame" />
+      <img src="images/reserve-bg.jpg" alt="The bar at The Copper Spoon" />
+    </section>
+
+    <section class="section section-light">
+      <div class="section-inner visit-grid">
+        <div>
+          <p class="eyebrow">Visit</p>
+          <h2>14 Elm Row, N1</h2>
+          <p class="meta-note">
+            Two minutes from Angel. The door is unmarked except for a copper
+            spoon on the glass. Ring if it looks shut — we are probably in.
+          </p>
+          <p class="meta-note">020 7946 0138</p>
+          <a class="button" href="reservations.html">Book with OpenTable</a>
+        </div>
+        <div>
           <ul class="hours-list">
-            <li><span>Tue–Thu</span> 12:00–22:00</li>
-            <li><span>Fri–Sat</span> 12:00–22:30</li>
-            <li><span>Sun</span> 12:00–16:00</li>
-            <li><span>Mon</span> Closed</li>
+            <li><span>Tuesday – Thursday</span> 12:00–22:00</li>
+            <li><span>Friday – Saturday</span> 12:00–22:30</li>
+            <li><span>Sunday</span> 13:00 roast</li>
+            <li><span>Monday</span> Closed</li>
           </ul>
-        </aside>
+        </div>
       </div>
     </section>
 
     <footer class="site-footer">
       <div class="footer-wrap">
-        <span>The Copper Spoon</span>
-        <a href="reservations.html">Book with OpenTable</a>
+        <span>The Copper Spoon, Islington</span>
+        <a href="reservations.html">Reservations</a>
       </div>
     </footer>
 
