@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/restref.js?v=3"></script>
   </head>
   <body>
     <header class="site-header site-header--solid">
@@ -22,8 +23,10 @@
           <a href="settings.html" aria-current="page">Settings</a>
         </nav>
       </div>
-      <!-- Floating widget: paste in the site header so it loads on every page. -->
-      <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=floating&ot_source=Restaurant%20website'></script>
+      <!-- Floating widget from Settings. Paste in the site header. -->
+      <script>
+        Restref.write("home");
+      </script>
     </header>
 
     <section class="page-hero">
@@ -31,19 +34,18 @@
         <p class="eyebrow">Implementation</p>
         <h1>Settings</h1>
         <p>
-          These snippets match a typical restaurant-site install. The floating
-          widget is pasted in the site header so it appears on every page. The
-          embedded widget is pasted in the body of the reservations page.
+          Edit the snippets below and save. This browser will use them in the
+          same places a restaurant would: floating widget in the site header
+          (every page), embedded widget in the reservations page body.
         </p>
         <ol class="demo-steps">
-          <li>Copy the header snippet for a site-wide floating widget.</li>
+          <li>Paste or edit a snippet, then Save.</li>
           <li>
-            Open <a href="index.html">Home</a> — the floating widget comes from
-            the header.
+            Open <a href="index.html">Home</a> to see the floating header widget.
           </li>
           <li>
-            Open <a href="reservations.html">Reservations</a> for the embedded
-            widget in the page body (the floating header widget is there too).
+            Open <a href="reservations.html">Reservations</a> to see the
+            embedded widget (the floating header widget loads there too).
           </li>
         </ol>
       </div>
@@ -112,7 +114,6 @@
       </div>
     </footer>
 
-    <script src="js/restref.js?v=2"></script>
-    <script src="js/settings.js"></script>
+    <script src="js/settings.js?v=3"></script>
   </body>
 </html>

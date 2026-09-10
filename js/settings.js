@@ -20,7 +20,7 @@
       return;
     }
     Restref.set("home", html);
-    setStatus("Saved Home Page Widget. Open Home to see the floating widget.");
+    window.location.reload();
   });
 
   document.getElementById("reservations-form").addEventListener("submit", function (event) {
@@ -31,12 +31,12 @@
       return;
     }
     Restref.set("reservations", html);
-    setStatus("Saved Reservation Page Widget. Open Reservations to see the embedded widget.");
+    setStatus("Saved. The reservations page body now uses this embedded snippet.");
   });
 
   document.getElementById("home-reset").addEventListener("click", function () {
     homeField.value = Restref.reset("home");
-    setStatus("Reset Home Page Widget to the default floating snippet.");
+    window.location.reload();
   });
 
   document.getElementById("reservations-reset").addEventListener("click", function () {

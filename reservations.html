@@ -11,6 +11,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/styles.css" />
+    <script src="js/restref.js?v=3"></script>
   </head>
   <body class="page-reservations">
     <header class="site-header">
@@ -22,8 +23,10 @@
           <a href="settings.html">Settings</a>
         </nav>
       </div>
-      <!-- Floating widget: paste in the site header so it loads on every page. -->
-      <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=floating&ot_source=Restaurant%20website'></script>
+      <!-- Floating widget from Settings. Paste in the site header. -->
+      <script>
+        Restref.write("home");
+      </script>
     </header>
 
     <main class="reserve-stage">
@@ -33,7 +36,10 @@
         alt=""
       />
       <div class="widget-only" id="restref-mount">
-        <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=embedded&ot_source=Restaurant%20website'></script>
+        <!-- Embedded widget from Settings. Paste in the reservations page body. -->
+        <script>
+          Restref.write("reservations");
+        </script>
       </div>
     </main>
   </body>

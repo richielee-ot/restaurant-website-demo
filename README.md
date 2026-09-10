@@ -11,8 +11,8 @@ A small static restaurant website for testing OpenTable restref widgets.
 ## How to demo
 
 1. Open **Settings** to copy or inspect the two snippets.
-2. Open **Home**. The floating restref widget (`widgetMode=floating`) is pinned to the bottom-right of the page and stays there while you scroll.
-3. Open **Reservations**. The embedded restref widget (`widgetMode=embedded`) is installed in the booking section.
+2. Edit a snippet on **Settings** and Save. Home, Reservations, and Settings all read that snippet from this browser.
+3. The floating snippet is written into the **site header**. The embedded snippet is written into the reservations page body.
 
 ## Default snippets
 
