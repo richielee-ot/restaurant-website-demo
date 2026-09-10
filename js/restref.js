@@ -45,8 +45,8 @@ window.Restref = (function () {
     });
   }
 
-  function loadPage(page, mount) {
-    inject(mount, get(page));
+  function write(page) {
+    document.write(get(page));
   }
 
   return {
@@ -55,6 +55,6 @@ window.Restref = (function () {
     set: set,
     reset: reset,
     inject: inject,
-    loadPage: loadPage,
+    write: write,
   };
 })();

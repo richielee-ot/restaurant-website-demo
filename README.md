@@ -10,9 +10,9 @@ A small static restaurant website for testing OpenTable restref widgets.
 
 ## How to demo
 
-1. Open **Settings**. Confirm the two snippets, or paste replacements and save. Saves stay in this browser only.
-2. Open **Home**. The Home Page Widget is the floating restref implementation (`widgetMode=floating`). Look for the OpenTable overlay button.
-3. Open **Reservations**. The Reservation Page Widget is the embedded restref implementation (`widgetMode=embedded`) in the page body.
+1. Open **Settings** to copy or inspect the two snippets.
+2. Open **Home**. The floating restref widget (`widgetMode=floating`) is installed in the page HTML. Look for the OpenTable overlay button.
+3. Open **Reservations**. The embedded restref widget (`widgetMode=embedded`) is installed in the booking section.
 
 ## Default snippets
 

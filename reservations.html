@@ -20,11 +20,11 @@
 
     <section class="page-hero">
       <div class="section-inner page-intro">
-        <p class="eyebrow">OpenTable</p>
-        <h1>Reserve a table</h1>
+        <p class="eyebrow">Book a table</p>
+        <h1>Reservations</h1>
         <p>
-          Book from this page using the embedded Reservation Page Widget. Swap
-          the snippet on <a href="settings.html">Settings</a>.
+          Lunch, dinner, and Sunday roast. Tell us when you would like to come
+          and we will find a table.
         </p>
       </div>
     </section>
@@ -33,8 +33,10 @@
       <div class="section-inner">
         <div class="widget-panel">
           <h2>Find a table</h2>
-          <p>Choose a date, time, and party size below.</p>
-          <div id="restref-mount" data-restref-mount></div>
+          <p>Choose a date, time, and party size.</p>
+          <div id="restref-mount">
+            <script type='text/javascript' src='//www.opentable.co.uk/widget/restref-v2/loader?rid=515106&widgetMode=embedded&ot_source=Restaurant%20website'></script>
+          </div>
         </div>
       </div>
     </section>
@@ -45,10 +47,5 @@
         <a href="index.html">Back to home</a>
       </div>
     </footer>
-
-    <script src="js/restref.js"></script>
-    <script>
-      Restref.loadPage("reservations", document.getElementById("restref-mount"));
-    </script>
   </body>
 </html>
