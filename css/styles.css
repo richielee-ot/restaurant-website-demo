@@ -298,3 +298,30 @@ code,
   justify-content: space-between;
   gap: 1rem;
 }
+
+.restref-floating {
+  position: fixed;
+  right: 1.25rem;
+  bottom: 1.25rem;
+  z-index: 2147483000;
+  width: min(390px, calc(100vw - 2rem));
+  max-height: calc(100vh - 2.5rem);
+  overflow: hidden;
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 12px 40px rgba(43, 33, 24, 0.28);
+}
+
+.restref-floating [id^="ot-restref-v2-widget-container"] {
+  display: block;
+  width: 100%;
+}
+
+.restref-floating .ot-restref-v2-widget-iframe {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  height: min(640px, calc(100vh - 2.5rem));
+  border: 0;
+  background: #fff;
+}
